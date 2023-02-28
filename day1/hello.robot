@@ -1,3 +1,7 @@
+*** Settings ***
+Documentation        Testing the methods of greeting a person
+
+
 *** Variables ***
 ${NAME}         Michal
 ${GREETINGS}    Hello, ${NAME}

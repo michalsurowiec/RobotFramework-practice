@@ -1,6 +1,11 @@
+*** Settings ***
+Documentation          Testing the properties of RobotFrameworks 
+...                    colletion and dictionary
+
+
 *** Variables ***
 @{BASKET}    apple    orange    banana
-&{DICTIONARY}    one = jeden    two=dwa    three=trzy    
+&{DICTIONARY}    one=jeden    two=dwa    three=trzy    
 ...             four=cztery    five=piec
 
 
