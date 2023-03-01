@@ -7,6 +7,7 @@ Library     Collections
 *** Variables ***
 @{BASKET}    apple    orange    banana
 
+
 *** Test Cases ***
 Log first content of the basket
     ${fruit}    Get From List    ${BASKET}    0
