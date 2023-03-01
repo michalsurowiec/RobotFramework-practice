@@ -13,6 +13,8 @@ Greet Person
 
 Greet Person with Name
     Log To Console    Hello, ${NAME}
+    Variable Should Exist    \${NAME}
 
 Show Greetings
     Log To Console    ${GREETINGS}
+    Variable Should Exist    \${GREETINGS}
