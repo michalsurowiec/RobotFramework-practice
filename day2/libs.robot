@@ -11,3 +11,4 @@ Library     Collections
 Log first content of the basket
     ${fruit}    Get From List    ${BASKET}    0
     Log To Console    ${fruit}
+    Should Not Be Empty    ${fruit}
