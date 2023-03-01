@@ -16,7 +16,7 @@ Log contents of the basket
 
 Log first content of the basket
     Log To Console          ${BASKET}[0]
-    Should Be Equal         ${BASKET}           apple
+    Should Be Equal         ${BASKET}[0]           apple
 
 Log contents of the dictionary
     Log To Console          ${DICTIONARY}
