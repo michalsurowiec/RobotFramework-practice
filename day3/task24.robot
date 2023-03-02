@@ -8,6 +8,6 @@ Library    String
 *** Keywords ***
 Fetch First Word From Phrase
     [Arguments]         ${phrase}
-    ${first_word}       Split String    ${phrase}
-    RETURN              ${first_word}
+    @{words}       Split String    ${phrase}
+    RETURN              ${words}[0]
 
