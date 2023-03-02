@@ -19,6 +19,10 @@ Integer With 1 Element
     Verify That List Has Two Elements       ${WRONG_INTEGER}
 
 *** Keywords ***
+    [Documentation]     It takes one argument and verifies if it has correct Length
+    ...                 
+    ...                 Input can be either a variable or a collection. 
+    ...                 If length is incorrect, it fails the test case.
 Verify That List Has Two Elements
     [Arguments]         @{list}
     Length Should Be    @{list}    2

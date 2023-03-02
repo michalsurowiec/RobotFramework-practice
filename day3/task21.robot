@@ -8,5 +8,6 @@ Greet Me And My Group
 
 *** Keywords ***
 Greet Person
+    [Documentation]     Logs in console message for input name
     [Arguments]         ${name}
     Log To Console      Hello, ${name}
