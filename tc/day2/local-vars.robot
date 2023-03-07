@@ -1,3 +1,7 @@
+*** Settings ***
+Test Tags       local
+
+
 *** Test Cases ***
 My Favourite colour
     [Tags]              variables

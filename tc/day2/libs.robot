@@ -2,6 +2,7 @@
 Documentation           Testing the properties of RobotFrameworks 
 ...                     colletion and dictionary
 Library     Collections
+Test Tags   library
 
 
 *** Variables ***
