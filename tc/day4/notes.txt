@@ -1,0 +1,3 @@
+robot --outputdir results --include list --loglevel TRACE tc
+
+robot -d results -i list -L TRACE tc
