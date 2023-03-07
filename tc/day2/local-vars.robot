@@ -23,7 +23,6 @@ Hard To Decide
     Should Not Be Equal    ${colour3}    ${colour1}
 
 Colours in a list
-    [Tags]              variables
     @{colours}      Create List     red     black   purple
     Log To Console    ${\n}${colours}
     Log To Console    My most favourite colour is ${colours}[0]
