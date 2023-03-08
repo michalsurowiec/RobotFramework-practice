@@ -1,3 +1,6 @@
 robot --outputdir results --include list --loglevel TRACE tc
 
 robot -d results -i list -L TRACE tc
+
+--logtitle
+Sets a title for the generated test log
