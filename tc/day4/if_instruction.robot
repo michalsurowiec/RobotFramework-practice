@@ -33,6 +33,24 @@ Validate Password With IF-END Instruction
     ${validation_results}       Validate Passwords IF-END   ${INVALID_PASSWORD_4}
     Should Not Be True          ${validation_results}
 
+Validate Password With IF-ELSE Instruction
+    ${validation_results}       Validate Passwords IF-ELSE   ${VALID_PASSWORD_1}
+    Should Be True              ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${VALID_PASSWORD_2}
+    Should Be True              ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${VALID_PASSWORD_3}
+    Should Be True              ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${VALID_PASSWORD_4}
+    Should Be True              ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${INVALID_PASSWORD_1}
+    Should Not Be True          ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${INVALID_PASSWORD_2}
+    Should Not Be True          ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${INVALID_PASSWORD_3}
+    Should Not Be True          ${validation_results}
+    ${validation_results}       Validate Passwords IF-ELSE  ${INVALID_PASSWORD_4}
+    Should Not Be True          ${validation_results}
+
 
 *** Keywords ***
 Validate Passwords IF-END
@@ -49,3 +67,29 @@ Validate Passwords IF-END
     END
 
     RETURN  ${True}
+
+Validate Passwords IF-ELSE
+    [Arguments]     ${password}
+    ${length}       Get Length      ${password}
+    ${matches}      Get Regexp Matches      ${password}     123
+
+    IF          ${length} < 8
+        RETURN      ${False}
+    ELSE IF     ${matches}
+        RETURN      ${False}
+    END
+
+    RETURN  ${True}
+
+Validate Passwords IF-ELSE
+    [Arguments]     ${password}
+    ${length}       Get Length      ${password}
+    ${matches}      Get Regexp Matches      ${password}     123
+
+    IF          ${length} < 8
+        RETURN      ${False}
+    ELSE IF     ${matches}
+        RETURN      ${False}
+    ELSE
+        RETURN  ${True}
+    END
